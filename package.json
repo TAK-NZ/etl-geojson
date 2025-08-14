@@ -10,7 +10,7 @@
         "build": "tsc --build",
         "test": "exit 0"
     },
-    "author": "Christian Elsen <chris@elsen.ca>",
+    "author": "Christian Elsen <chris@elsen.nz>",
     "license": "AGPL-3.0-only",
     "devDependencies": {
         "@types/jsonwebtoken": "^9.0.1",
