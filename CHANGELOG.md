@@ -10,6 +10,22 @@
 
 ## Version History
 
+### v2.6.0
+
+- :arrow_up: Update Core Dependencies
+
+### v2.5.0
+
+- :arrow_up: Update Core Deps
+
+### v2.4.0
+
+- :arrow_up: Update Core Deps
+
+### v2.3.0
+
+- :arrow_up: Update Core Deps
+ 
 ### v2.2.0
 
 - :tada: Handle MultiGeometries

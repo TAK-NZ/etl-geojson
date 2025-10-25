@@ -1,6 +1,7 @@
 import hash from 'object-hash';
+import { Feature } from '@tak-ps/node-cot';
 import { Static, Type, TSchema } from '@sinclair/typebox';
-import ETL, { Event, SchemaType, handler as internal, local, DataFlowType, InvocationType, InputFeatureCollection } from '@tak-ps/etl';
+import ETL, { Event, SchemaType, handler as internal, local, DataFlowType, InvocationType } from '@tak-ps/etl';
 
 const Environment = Type.Object({
     URL: Type.String(),
@@ -133,7 +134,7 @@ export default class Task extends ETL {
             throw new Error('Only FeatureCollection is supported');
         }
 
-        const fc: Static<typeof InputFeatureCollection> = {
+        const fc: Static<typeof Feature.InputFeatureCollection> = {
             type: 'FeatureCollection',
             features: []
         };
@@ -180,8 +181,8 @@ export default class Task extends ETL {
     }
 }
 
-await local(new Task(import.meta.url), import.meta.url);
+await local(await Task.init(import.meta.url), import.meta.url);
 export async function handler(event: Event = {}) {
-    return await internal(new Task(import.meta.url), event);
+    return await internal(await Task.init(import.meta.url), event);
 }
 
