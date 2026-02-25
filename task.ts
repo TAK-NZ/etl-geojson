@@ -127,7 +127,7 @@ export default class Task extends ETL {
         try {
             body = await res.json();
         } catch (error) {
-            throw new Error(`Invalid JSON response: ${error}`);
+            throw new Error(`Invalid JSON response: ${error}`, { cause: error });
         }
 
         if (body.type !== 'FeatureCollection') {
