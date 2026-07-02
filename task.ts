@@ -149,8 +149,8 @@ export default class Task extends ETL {
                 const collectionFeatures = this.processGeometryCollection(feat.geometry.geometries, baseId, feat.properties);
                 fc.features.push(...collectionFeatures);
             } else if (feat.geometry.type.startsWith('Multi') && feat.geometry.coordinates) {
+                const geometryType = feat.geometry.type.replace('Multi', '');
                 (feat.geometry.coordinates as (number[] | number[][] | number[][][])[]).forEach((coords, idx: number) => {
-                    const geometryType = feat.geometry.type.replace('Multi', '');
                     const geometry = this.createGeometry(geometryType, coords);
                     if (geometry) {
                         fc.features.push({
