@@ -2,7 +2,7 @@
     "name": "etl-geojson",
     "type": "module",
     "prviate": true,
-    "version": "2.7.0",
+    "version": "2.10.0",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -12,18 +12,21 @@
     },
     "author": "Christian Elsen <chris@elsen.nz>",
     "license": "AGPL-3.0-only",
+    "engines": {
+        "node": ">= 24"
+    },
     "devDependencies": {
-        "@eslint/js": "^10.0.1",
-        "@types/jsonwebtoken": "^9.0.1",
-        "@types/object-hash": "^3.0.6",
-        "eslint": "^10.0.2",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.9.3",
-        "typescript-eslint": "^8.56.1"
+        "@eslint/js": "10.0.1",
+        "@types/jsonwebtoken": "9.0.10",
+        "@types/object-hash": "3.0.6",
+        "eslint": "10.6.0",
+        "ts-node": "10.9.2",
+        "typescript": "6.0.3",
+        "typescript-eslint": "8.62.1"
     },
     "dependencies": {
-        "@sinclair/typebox": "^0.34.48",
-        "@tak-ps/etl": "^10.0.3",
-        "object-hash": "^3.0.0"
+        "@sinclair/typebox": "0.34.49",
+        "@tak-ps/etl": "10.8.0",
+        "object-hash": "3.0.0"
     }
 }
