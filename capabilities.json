@@ -1,0 +1,27 @@
+{
+    "version": "1.0",
+    "name": "GeoJSON",
+    "description": "Fetches a GeoJSON FeatureCollection from a configurable URL (with optional query parameters, headers, timeout and retries) on a schedule and posts the Point, LineString, Polygon and expanded Multi/GeometryCollection features to the map.",
+    "compute": {
+        "memory": 1024,
+        "timeout": 300
+    },
+    "permissions": [
+        {
+            "resource": "feature:*",
+            "required": true,
+            "description": "Submits the fetched GeoJSON features as CoT features to CloudTAK"
+        }
+    ],
+    "invocations": {
+        "incoming": {
+            "schedule": {
+                "description": "Fetches the configured GeoJSON URL for updated features on a schedule.",
+                "default": {
+                    "enabled": true,
+                    "schedule": "rate(1 minute)"
+                }
+            }
+        }
+    }
+}
