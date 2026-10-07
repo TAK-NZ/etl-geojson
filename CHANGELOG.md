@@ -10,6 +10,31 @@
 
 ## Version History
 
+### v2.12.0
+
+- :rocket: Add Capabilities document
+- :arrow_up: Update GH Actions
+
+### v2.11.0
+
+- :arrow_up: Update Core Dependencies
+
+### v2.10.0
+
+- :arrow_up: Update Core Dependencies
+
+### v2.9.0
+
+- :arrow_up: Update Core Dependencies
+
+### v2.8.0
+
+- :arrow_up: Update Core Dependencies
+
+### v2.7.0
+
+- :arrow_up: Update Core Dependencies
+
 ### v2.6.0
 
 - :arrow_up: Update Core Dependencies
@@ -25,7 +50,7 @@
 ### v2.3.0
 
 - :arrow_up: Update Core Deps
- 
+
 ### v2.2.0
 
 - :tada: Handle MultiGeometries
