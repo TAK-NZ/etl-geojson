@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v2.11.0
+- :tada: Add `capabilities.json` manifest (`feature:*` required, schedule default `rate(1 minute)`) validated against `StaticCapabilitiesSchema`, embedded as the `com.cloudtak.capabilities` OCI annotation on the pushed image by a `docker buildx build` step in the deploy workflow (TAK-NZ/CloudTAK#166)
+- :arrow_up: Update `@tak-ps/etl` from pinned `10.8.0` to `^10.22.2` and move all dependencies to caret ranges
+- :white_check_mark: Add basic test suite (`tsx --test`) including capabilities manifest validation
+- :rocket: Keep the manual buildx build/push instead of the `cloudtak-etl` CLI because its `bin/build.ts` hardcodes ECR repo `tak-vpc-<Environment>-cloudtak-tasks` while base-infra creates `<stackname>-etltasks`
 ### v2.6.0
 
 - :arrow_up: Update Core Dependencies
