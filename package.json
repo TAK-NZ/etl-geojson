@@ -6,9 +6,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint *.ts",
+        "lint": "eslint *.ts test",
         "build": "tsc --build",
-        "test": "exit 0"
+        "test": "tsx --test test/*.test.ts"
     },
     "author": "Christian Elsen <chris@elsen.nz>",
     "license": "AGPL-3.0-only",
@@ -21,6 +21,7 @@
         "@types/object-hash": "^3.0.6",
         "eslint": "^10.6.0",
         "ts-node": "^10.9.2",
+        "tsx": "^4.23.15",
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.62.1"
     },
