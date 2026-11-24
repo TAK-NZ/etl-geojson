@@ -10,6 +10,9 @@
 
 ## Version History
 
+### v2.12.1
+- :arrow_up: Update `@tak-ps/etl` to `^11.4.0`. CloudTAK v14 requires ETLs to be on ETL-Base v11 or higher. v11 publishes Output schemas as named schemas, so this task needed no change for that, and the release also works with CloudTAK v13
+- :arrow_up: Update the other dependencies within their existing ranges, which clears the `npm audit --production` findings that the deploy workflow checks
 ### v2.12.0
 
 - :rocket: Add Capabilities document
